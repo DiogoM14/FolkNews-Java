@@ -3,6 +3,7 @@ package folknews;
 import java.util.Scanner;
 
 import folknews.repositories.RepositorioUtilizadores;
+import folknews.services.ProcuraUtilizador;
 import folknews.services.RegistarUtilizador;
 import folknews.views.Menu;
 
@@ -10,6 +11,7 @@ public class App {
     public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
         RegistarUtilizador registar = new RegistarUtilizador();
+        ProcuraUtilizador procurar = new ProcuraUtilizador();
         RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
         
         Menu.execMenu();
@@ -24,6 +26,9 @@ public class App {
                     break;
                 case 2:
                     registar.execRegisto(repositorio);
+                    break;
+                case 3:
+                    procurar.execProcura(repositorio);
                     break;
                 default:
                     System.out.println("Opção inválida.");
