@@ -8,6 +8,8 @@ public class Utilizador {
   private String DataNascimento;
   private String TemaPreferencial;
 
+  public Utilizador() {}
+
   public Utilizador(String nome, String email, String password, String Profissao, String DataNascimento, String TemaPreferencial) {
     this.nome = nome;
     this.email = email;

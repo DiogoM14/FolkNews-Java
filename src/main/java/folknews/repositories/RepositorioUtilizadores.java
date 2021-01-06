@@ -10,12 +10,21 @@ public class RepositorioUtilizadores {
   public RepositorioUtilizadores() {  // Constructor
   }
 
-  public void addUtilizador(Utilizador u) {
-    this.arrayUtilizadores.add(u);
+  public void addUtilizador(Utilizador user) { // Regista Utilizador
+    this.arrayUtilizadores.add(user);
   }
 
-  // Receber Lista de todos os Users registados
+  // public Utilizador getUtilizadorPorEmail(Utilizador email) {
+  //   int pos;
+  //   pos = this.arrayUtilizadores.indexOf(email);
+  //   return this.arrayUtilizadores.get(pos);
+  // }
 
+  // public void removeUtilizador(Utilizador email) {
+  //   this.arrayUtilizadores.remove(email);
+  // }
+
+  // Receber Lista de todos os Users registados
   @Override
   public String toString() {
     return "{" +
