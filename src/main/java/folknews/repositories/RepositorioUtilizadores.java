@@ -23,12 +23,6 @@ public class RepositorioUtilizadores {
     return this.arrayUtilizadores.get(pos);
   }
 
-  // public Utilizador getUtilizadorPorEmail(Utilizador email) {
-  //   int pos;
-  //   pos = this.arrayUtilizadores.indexOf(email);
-  //   return this.arrayUtilizadores.get(pos);
-  // }
-
   // public void removeUtilizador(Utilizador email) {
   //   this.arrayUtilizadores.remove(email);
   // }

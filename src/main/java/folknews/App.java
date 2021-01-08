@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.LoginUtilizador;
-import folknews.services.ProcuraUtilizador;
 import folknews.services.RegistarUtilizador;
 import folknews.views.Menu;
 

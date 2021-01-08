@@ -14,6 +14,7 @@ public class LoginUtilizador {
     int pos;
     
     Utilizador u1 = new Utilizador();
+    Utilizador u2 = new Utilizador();
     
     System.out.print("E-mail -> ");
     email = scanner.next();
@@ -24,7 +25,11 @@ public class LoginUtilizador {
     u1.setPassword(password);
     
     if(pos != -1) {
-      System.out.println(repositorio.getUtilizadorPorEmail(pos));
+      u2 = repositorio.getUtilizadorPorEmail(pos);
+
+      if(u1.getPassword() != null && u1.getPassword().equals(u2.getPassword())) {
+        System.out.println("Entrou no Sistema!");
+      }
       Menu.execMenu();
 
     } else {
