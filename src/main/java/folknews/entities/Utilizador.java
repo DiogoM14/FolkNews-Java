@@ -6,19 +6,19 @@ public class Utilizador {
   private String nome;
   private String email;
   private String password;
-  private String Profissao;
-  private String DataNascimento;
-  private String TemaPreferencial;
+  private String profissao;
+  private String dataNascimento;
+  private String temaPreferencial;
 
   public Utilizador() {}
 
-  public Utilizador(String nome, String email, String password, String Profissao, String DataNascimento, String TemaPreferencial) {
+  public Utilizador(String nome, String email, String password, String profissao, String dataNascimento, String temaPreferencial) {
     this.nome = nome;
     this.email = email;
     this.password = password;
-    this.Profissao = Profissao;
-    this.DataNascimento = DataNascimento;
-    this.TemaPreferencial = TemaPreferencial;
+    this.profissao = profissao;
+    this.dataNascimento = dataNascimento;
+    this.temaPreferencial = temaPreferencial;
   }
 
   public String getNome() {
@@ -46,27 +46,27 @@ public class Utilizador {
   }
 
   public String getProfissao() {
-    return this.Profissao;
+    return this.profissao;
   }
 
-  public void setProfissao(String Profissao) {
-    this.Profissao = Profissao;
+  public void setProfissao(String profissao) {
+    this.profissao = profissao;
   }
 
   public String getDataNascimento() {
-    return this.DataNascimento;
+    return this.dataNascimento;
   }
 
-  public void setDataNascimento(String DataNascimento) {
-    this.DataNascimento = DataNascimento;
+  public void setDataNascimento(String dataNascimento) {
+    this.dataNascimento = dataNascimento;
   }
 
   public String getTemaPreferencial() {
-    return this.TemaPreferencial;
+    return this.temaPreferencial;
   }
 
-  public void setTemaPreferencial(String TemaPreferencial) {
-    this.TemaPreferencial = TemaPreferencial;
+  public void setTemaPreferencial(String temaPreferencial) {
+    this.temaPreferencial = temaPreferencial;
   }
 
   @Override

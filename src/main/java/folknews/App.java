@@ -10,9 +10,10 @@ import folknews.views.Menu;
 public class App {
     public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
-        RegistarUtilizador registar = new RegistarUtilizador();
+
         RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
         LoginUtilizador login = new LoginUtilizador();
+        RegistarUtilizador registar = new RegistarUtilizador();
         
         Menu.execMenu();
         

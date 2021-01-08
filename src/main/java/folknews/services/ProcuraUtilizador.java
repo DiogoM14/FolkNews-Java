@@ -20,7 +20,7 @@ public class ProcuraUtilizador {
     u1.setEmail(email);
     pos = repositorio.existeEmail(u1);
 
-    if(pos != -1) {
+    if(pos != -1) { // Se email existe
       repositorio.getUtilizadorPorEmail(pos);
       System.out.println(u1.toString());
       return(pos);

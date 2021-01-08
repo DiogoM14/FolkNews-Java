@@ -1,8 +1,7 @@
 package folknews.views;
 
 public class Menu {
-  private Menu() {
-  }
+  private Menu() {}
 
   public static void execMenu() {
     System.out.println("\n");
