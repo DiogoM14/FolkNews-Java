@@ -19,14 +19,15 @@ public class RepositorioUtilizadores {
   }
 
   public Utilizador getUtilizadorPorEmail(int pos) {
+    // System.out.println("REPOSITORY USER ENCONTRADO" + this.arrayUtilizadores.get(pos));
     return this.arrayUtilizadores.get(pos);
   }
 
-  public Utilizador getUtilizadorPorEmail(Utilizador email) {
-    int pos;
-    pos = this.arrayUtilizadores.indexOf(email);
-    return this.arrayUtilizadores.get(pos);
-  }
+  // public Utilizador getUtilizadorPorEmail(Utilizador email) {
+  //   int pos;
+  //   pos = this.arrayUtilizadores.indexOf(email);
+  //   return this.arrayUtilizadores.get(pos);
+  // }
 
   // public void removeUtilizador(Utilizador email) {
   //   this.arrayUtilizadores.remove(email);

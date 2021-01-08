@@ -30,6 +30,8 @@ public class RegistarUtilizador {
     // ----------------------------------------------------------------
 
     u1 = new Utilizador(nome, email, password, profissao, dataNascimento, temaPreferencial);
+
+    
     repositorio.addUtilizador(u1);
     System.out.println(repositorio.toString());
     Menu.execMenu();
