@@ -19,7 +19,7 @@ public class RegistarUtilizador {
     nome = scanner.nextLine();
     System.out.print("E-mail -> ");
     email = scanner.nextLine();
-    System.out.print("Palavra-Passe -> ");
+    System.out.print("Palavra-Passe -> ");  
     password = scanner.nextLine();
     System.out.print("Profissão -> ");
     profissao = scanner.nextLine();

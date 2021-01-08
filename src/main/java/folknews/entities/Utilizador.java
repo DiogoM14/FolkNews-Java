@@ -1,5 +1,7 @@
 package folknews.entities;
-// Cada autor é caraterizado por nome, profissão, data de nascimento e o tema de escrita preferencial. 
+
+import java.util.Objects;
+
 public class Utilizador {
   private String nome;
   private String email;
@@ -79,4 +81,19 @@ public class Utilizador {
       "}";
   }
 
+  @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Utilizador)) {
+            return false;
+        }
+        Utilizador utilizador = (Utilizador) o;
+        return Objects.equals(email, utilizador.email);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(email);
+  }
 }

@@ -14,8 +14,8 @@ public class RepositorioUtilizadores {
     this.arrayUtilizadores.add(user);
   }
 
-  public int existeEmail(Utilizador user) {
-    return this.arrayUtilizadores.indexOf(user);
+  public int existeEmail(Utilizador email) {
+    return this.arrayUtilizadores.indexOf(email);
   }
 
   public Utilizador getUtilizadorPorEmail(int pos) {
