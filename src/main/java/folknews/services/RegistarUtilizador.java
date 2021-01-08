@@ -14,7 +14,7 @@ public class RegistarUtilizador {
     Utilizador u1 = new Utilizador(); // Instância o objeto da class utilizador
 
     // Formulário -------------------------------------------------------
-    scanner.nextLine();
+    System.out.println("\n");
     System.out.print("Nome e Apelido -> ");
     nome = scanner.nextLine();
     System.out.print("E-mail -> ");
@@ -33,7 +33,7 @@ public class RegistarUtilizador {
 
     
     repositorio.addUtilizador(u1);
-    System.out.println(repositorio.toString());
+    // System.out.println(repositorio.toString());
     Menu.execMenu();
   }
 }

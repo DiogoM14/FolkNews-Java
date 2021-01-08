@@ -14,8 +14,9 @@ public class LoginUtilizador {
     int pos;
     
     Utilizador u1 = new Utilizador();
-    Utilizador u2 = new Utilizador();
+    Utilizador utilizadorFiltrado = new Utilizador();
     
+    System.out.println("\n");
     System.out.print("E-mail -> ");
     email = scanner.next();
     u1.setEmail(email);
@@ -24,10 +25,10 @@ public class LoginUtilizador {
     pos = repositorio.existeEmail(u1);
     u1.setPassword(password);
     
-    if(pos != -1) {
-      u2 = repositorio.getUtilizadorPorEmail(pos);
+    if(pos != -1) { // Se E-mail registado
+      utilizadorFiltrado = repositorio.getUtilizadorPorEmail(pos);  // Objeto com email filtrado
 
-      if(u1.getPassword() != null && u1.getPassword().equals(u2.getPassword())) {
+      if(u1.getPassword() != null && u1.getPassword().equals(utilizadorFiltrado.getPassword())) {
         System.out.println("Entrou no Sistema!");
       }
       Menu.execMenu();

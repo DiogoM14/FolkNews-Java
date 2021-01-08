@@ -14,6 +14,7 @@ public class ProcuraUtilizador {
     
     Utilizador u1 = new Utilizador();
 
+    System.out.println("\n");
     System.out.print("E-mail a procurar -> ");
     email = scanner.next();
     u1.setEmail(email);

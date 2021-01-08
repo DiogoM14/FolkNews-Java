@@ -27,8 +27,6 @@ public class App {
                 case 2:
                     registar.execRegisto(repositorio);
                     break;
-                case 3:
-                    break;
                 default:
                     System.out.println("Opção inválida.");
             }
