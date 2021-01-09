@@ -2,6 +2,8 @@ package folknews.entities;
 
 import java.util.Objects;
 
+import folknews.entities.enums.TipoUtilizador;
+
 public class Utilizador {
   private String nome;
   private String email;
@@ -9,16 +11,18 @@ public class Utilizador {
   private String profissao;
   private String dataNascimento;
   private String temaPreferencial;
+  private TipoUtilizador tipoUtilizador;
 
   public Utilizador() {}
 
-  public Utilizador(String nome, String email, String password, String profissao, String dataNascimento, String temaPreferencial) {
+  public Utilizador(String nome, String email, String password, String profissao, String dataNascimento, String temaPreferencial, TipoUtilizador tipoUtilizador) {
     this.nome = nome;
     this.email = email;
     this.password = password;
     this.profissao = profissao;
     this.dataNascimento = dataNascimento;
     this.temaPreferencial = temaPreferencial;
+    this.tipoUtilizador = tipoUtilizador;
   }
 
   public String getNome() {
@@ -69,15 +73,24 @@ public class Utilizador {
     this.temaPreferencial = temaPreferencial;
   }
 
+  public TipoUtilizador getTipoUtilizador() {
+    return this.tipoUtilizador;
+  }
+
+  public void setTipoUtilizador(TipoUtilizador tipoUtilizador) {
+    this.tipoUtilizador = tipoUtilizador;
+  }
+
   @Override
   public String toString() {
     return "{" +
       " nome='" + getNome() + "'" +
       ", email='" + getEmail() + "'" +
       ", password='" + getPassword() + "'" +
-      ", Profissao='" + getProfissao() + "'" +
-      ", DataNascimento='" + getDataNascimento() + "'" +
-      ", TemaPreferencial='" + getTemaPreferencial() + "'" +
+      ", profissao='" + getProfissao() + "'" +
+      ", dataNascimento='" + getDataNascimento() + "'" +
+      ", temaPreferencial='" + getTemaPreferencial() + "'" +
+      ", tipoUtilizador='" + getTipoUtilizador() + "'" +
       "}";
   }
 
