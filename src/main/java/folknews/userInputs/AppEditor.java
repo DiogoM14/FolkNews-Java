@@ -1,4 +1,4 @@
-package folknews;
+package folknews.userInputs;
 
 import java.util.Scanner;
 

@@ -2,7 +2,7 @@ package folknews.services;
 
 import java.util.Scanner;
 
-import folknews.AppEditor;
+import folknews.userInputs.AppEditor;
 import folknews.entities.Utilizador;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.Menu;
