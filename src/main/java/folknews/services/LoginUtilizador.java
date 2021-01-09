@@ -29,6 +29,21 @@ public class LoginUtilizador {
       utilizadorFiltrado = repositorio.getUtilizadorPorEmail(pos);  // Objeto com email filtrado
 
       if(u1.getPassword() != null && u1.getPassword().equals(utilizadorFiltrado.getPassword())) {
+
+        switch (utilizadorFiltrado.getTipoUtilizador()) {
+          case ADMIN:
+            System.out.println("ADMIN");
+            break;
+          case EDITOR:
+            System.out.println("EDITOR");
+            break;
+          case LEITOR:
+            System.out.println("LEITOR");
+            break;
+          default:
+            System.out.println("Erro");
+        }
+
         System.out.println("Entrou no Sistema!");
       }
       Menu.execMenu();
