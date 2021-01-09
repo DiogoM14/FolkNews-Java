@@ -10,7 +10,7 @@ import folknews.views.Menu;
 public class App {
     public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
-
+        
         RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
         LoginUtilizador login = new LoginUtilizador();
         RegistarUtilizador registar = new RegistarUtilizador();
@@ -18,20 +18,20 @@ public class App {
         Menu.execMenu();
         
         int opcao = 0;
-
+        
         do {
             opcao = scanner.nextInt();
             switch (opcao) {
                 case 1:
-                    login.execLogin(repositorio);
-                    break;
+                login.execLogin(repositorio);
+                break;
                 case 2:
-                    registar.execRegisto(repositorio);
-                    break;
+                registar.execRegisto(repositorio);
+                break;
                 case 3:
-                    break;
+                break;
                 default:
-                    System.out.println("Opção inválida.");
+                System.out.println("Opção inválida.");
             }
         } while (opcao != 0);
         scanner.close();

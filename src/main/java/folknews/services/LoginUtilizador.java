@@ -2,10 +2,10 @@ package folknews.services;
 
 import java.util.Scanner;
 
+import folknews.AppEditor;
 import folknews.entities.Utilizador;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.Menu;
-import folknews.views.MenuEditor;
 
 public class LoginUtilizador {
   Scanner scanner = new Scanner(System.in);
@@ -16,6 +16,7 @@ public class LoginUtilizador {
     
     Utilizador u1 = new Utilizador();
     Utilizador utilizadorFiltrado = new Utilizador();
+    AppEditor editorWorkspace = new AppEditor();
     
     System.out.println("\n");
     System.out.print("E-mail -> ");
@@ -36,7 +37,7 @@ public class LoginUtilizador {
           System.out.println("ADMIN");
           break;
           case EDITOR:
-          MenuEditor.execMenuEditor();
+          editorWorkspace.execWorkspace();
           break;
           case LEITOR:
           System.out.println("LEITOR");
