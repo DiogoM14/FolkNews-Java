@@ -22,6 +22,8 @@ public class App {
         do {
             opcao = scanner.nextInt();
             switch (opcao) {
+                case 0:
+                break;
                 case 1:
                 login.execLogin(repositorio);
                 break;

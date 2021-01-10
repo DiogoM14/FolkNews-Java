@@ -2,6 +2,8 @@ package folknews.userInputs;
 
 import java.util.Scanner;
 
+import folknews.repositories.RepositorioArtigos;
+import folknews.services.CriarArtigo;
 import folknews.views.MenuEditor;
 
 public class AppEditor {
@@ -10,6 +12,9 @@ public class AppEditor {
   public static void execWorkspace() {
     Scanner scanner = new Scanner(System.in);
 
+    RepositorioArtigos repositorio = new RepositorioArtigos();
+    CriarArtigo cria = new CriarArtigo();
+
     MenuEditor.execMenuEditor();
     
     int opcao = 0;
@@ -17,8 +22,10 @@ public class AppEditor {
     do {
       opcao = scanner.nextInt();
       switch (opcao) {
+        case 0:
+        break;
         case 1:
-        System.out.println("FOI!");
+        cria.execRegistaArtigo(repositorio);
         break;
         case 2:
         System.out.println("FOI!");
