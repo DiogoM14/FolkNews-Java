@@ -3,7 +3,6 @@ package folknews.services;
 import java.util.Scanner;
 
 import folknews.entities.Artigo;
-import folknews.entities.Utilizador;
 import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.MenuEditor;
@@ -14,9 +13,7 @@ public class CriarArtigo extends RepositorioUtilizadores {
   public void execRegistaArtigo(RepositorioArtigos repositorio, String email) {
     String titulo, resumo, corpoArtigo, dataPub;
 
-    Utilizador u1 = new Utilizador();
     Artigo a1 = new Artigo();
-    // RepositorioUtilizadores a1 = new RepositorioUtilizadores();
 
     // Formulário -------------------------------------------------------
     System.out.println("\n");

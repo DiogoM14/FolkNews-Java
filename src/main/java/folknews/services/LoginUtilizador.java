@@ -16,7 +16,6 @@ public class LoginUtilizador {
     
     Utilizador u1 = new Utilizador();
     Utilizador utilizadorFiltrado = new Utilizador();
-    AppEditor editorWorkspace = new AppEditor();
     
     System.out.println("\n");
     System.out.print("E-mail -> ");
@@ -37,7 +36,7 @@ public class LoginUtilizador {
           System.out.println("ADMIN");
           break;
           case EDITOR:
-          editorWorkspace.execWorkspace(email);
+          AppEditor.execWorkspace(email);
           break;
           case LEITOR:
           System.out.println("LEITOR");

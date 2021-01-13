@@ -7,8 +7,6 @@ import folknews.services.CriarArtigo;
 import folknews.views.MenuEditor;
 
 public class AppEditor {
-  // private AppEditor() {}
-
   public static void execWorkspace(String email) {
     Scanner scanner = new Scanner(System.in);
 
