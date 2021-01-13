@@ -9,7 +9,7 @@ import folknews.views.MenuEditor;
 public class AppEditor {
   // private AppEditor() {}
 
-  public static void execWorkspace() {
+  public static void execWorkspace(String email) {
     Scanner scanner = new Scanner(System.in);
 
     RepositorioArtigos repositorio = new RepositorioArtigos();
@@ -25,7 +25,7 @@ public class AppEditor {
         case 0:
         break;
         case 1:
-        cria.execRegistaArtigo(repositorio);
+        cria.execRegistaArtigo(repositorio, email);
         break;
         case 2:
         System.out.println("FOI!");

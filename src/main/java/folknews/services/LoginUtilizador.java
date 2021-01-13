@@ -37,7 +37,7 @@ public class LoginUtilizador {
           System.out.println("ADMIN");
           break;
           case EDITOR:
-          editorWorkspace.execWorkspace();
+          editorWorkspace.execWorkspace(email);
           break;
           case LEITOR:
           System.out.println("LEITOR");
