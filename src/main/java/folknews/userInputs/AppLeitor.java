@@ -2,19 +2,16 @@ package folknews.userInputs;
 
 import java.util.Scanner;
 
-import folknews.App;
 import folknews.repositories.RepositorioArtigos;
-import folknews.services.CriarArtigo;
-import folknews.views.MenuEditor;
+import folknews.views.MenuLeitor;
 
-public class AppEditor {
-  public static void execWorkspace(String email) {
+public class AppLeitor {
+  public static void execWorkspaceLeitor() {
     Scanner scanner = new Scanner(System.in);
 
     RepositorioArtigos repositorio = new RepositorioArtigos();
-    CriarArtigo cria = new CriarArtigo();
 
-    MenuEditor.execMenuEditor();
+    MenuLeitor.execMenuLeitor();
     
     int opcao = 0;
     
@@ -24,10 +21,7 @@ public class AppEditor {
         case 0:
         break;
         case 1:
-        cria.execRegistaArtigo(repositorio, email);
-        break;
-        case 2:
-        System.out.println("FOI!");
+        System.out.println(repositorio.toString());
         break;
         default:
         System.out.println("Opção inválida.");

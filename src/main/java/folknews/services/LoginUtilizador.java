@@ -3,6 +3,7 @@ package folknews.services;
 import java.util.Scanner;
 
 import folknews.userInputs.AppEditor;
+import folknews.userInputs.AppLeitor;
 import folknews.entities.Utilizador;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.Menu;
@@ -39,7 +40,7 @@ public class LoginUtilizador {
           AppEditor.execWorkspace(email);
           break;
           case LEITOR:
-          System.out.println("LEITOR");
+          AppLeitor.execWorkspaceLeitor();
           break;
           default:
           System.out.println("Erro");
