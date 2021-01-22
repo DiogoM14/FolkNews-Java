@@ -41,7 +41,7 @@ public class LoginUtilizador {
           AppEditor.execWorkspace(email);
           break;
           case LEITOR:
-          AppLeitor.execWorkspaceLeitor();
+          AppLeitor.execWorkspaceLeitor(null);
           break;
           default:
           System.out.println("Erro");

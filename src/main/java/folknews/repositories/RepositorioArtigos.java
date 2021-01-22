@@ -14,6 +14,12 @@ public class RepositorioArtigos {
     this.arrayArtigos.add(artigo);
   }
 
+  // public void listar() {                     // Vehicle method
+  //   System.out.println("{" +
+  //     " Todos os Artigos ='" + arrayArtigos + "'" +
+  //     "}");
+  // }
+
   // public void removeUtilizador(Utilizador email) {
   //   this.arrayUtilizadores.remove(email);
   // }

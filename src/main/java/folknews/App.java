@@ -2,6 +2,7 @@ package folknews;
 
 import java.util.Scanner;
 
+import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.InicializaAdmin;
 import folknews.services.LoginUtilizador;

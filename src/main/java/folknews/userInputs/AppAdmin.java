@@ -4,17 +4,16 @@ import java.util.Scanner;
 
 import folknews.App;
 import folknews.repositories.RepositorioUtilizadores;
-import folknews.services.RegistarUtilizador;
 import folknews.views.MenuAdmin;
 
 public class AppAdmin {
   private AppAdmin() {}
 
-  public static void execWorkspaceAdmin() {
+  public static void execWorkspaceAdmin(RepositorioUtilizadores repositorio) {
     Scanner scanner = new Scanner(System.in);
 
-    RegistarUtilizador registar = new RegistarUtilizador();
-    RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
+    // RegistarUtilizador registar = new RegistarUtilizador();
+    // RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
 
     MenuAdmin.execMenuAdmin();
     
@@ -27,7 +26,7 @@ public class AppAdmin {
         App.main(null);
         break;
         case 1:
-        registar.execRegisto(repositorio);
+        // registar.execRegisto(repositorio);
         break;
         case 2:
         System.out.println("FOI!");

@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 import folknews.App;
 import folknews.repositories.RepositorioArtigos;
+import folknews.services.CriarArtigo;
 import folknews.views.MenuLeitor;
 
 public class AppLeitor {
   private AppLeitor() {}
 
-  public static void execWorkspaceLeitor() {
+  public static void execWorkspaceLeitor(RepositorioArtigos artigos) {
     Scanner scanner = new Scanner(System.in);
-
-    RepositorioArtigos repositorio = new RepositorioArtigos();
 
     MenuLeitor.execMenuLeitor();
     
@@ -25,7 +24,7 @@ public class AppLeitor {
         App.main(null);
         break;
         case 1:
-        System.out.println(repositorio.toString());
+        System.out.println(artigos.toString());
         break;
         default:
         System.out.println("Opção inválida.");

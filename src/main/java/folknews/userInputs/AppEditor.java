@@ -30,7 +30,7 @@ public class AppEditor {
         cria.execRegistaArtigo(repositorio, email);
         break;
         case 2:
-        System.out.println("FOI!");
+        // AppLeitor.execWorkspaceLeitor(repositorio);
         break;
         default:
         System.out.println("Opção inválida.");
