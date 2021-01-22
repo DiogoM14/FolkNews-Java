@@ -15,7 +15,7 @@ public class AppAdmin {
 
     MenuAdmin.execMenuAdmin();
     
-    int opcao = 0;
+    int opcao = -1;
     
     do {
       opcao = scanner.nextInt();
@@ -35,7 +35,7 @@ public class AppAdmin {
         default:
         System.out.println("Opção inválida.");
       }
-    } while (opcao != 0);
+    } while (opcao != -1);
     scanner.close();
   }
 }

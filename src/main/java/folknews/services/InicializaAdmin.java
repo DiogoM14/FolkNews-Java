@@ -12,6 +12,6 @@ public class InicializaAdmin {
 
     TipoUtilizador userTypeEnum = TipoUtilizador.valueOf("ADMIN");
     admin = new Utilizador("", "admin", "admin", "", "", "", userTypeEnum);
-    repositorio.addAdmin(admin);
+    repositorio.addUtilizador(admin);
   }
 }

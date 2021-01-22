@@ -3,6 +3,7 @@ package folknews.userInputs;
 import java.util.Scanner;
 
 import folknews.repositories.RepositorioArtigos;
+import folknews.views.Menu;
 import folknews.views.MenuLeitor;
 
 public class AppLeitor {
@@ -13,12 +14,13 @@ public class AppLeitor {
 
     MenuLeitor.execMenuLeitor();
     
-    int opcao = 0;
+    int opcao = -1;
     
     do {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
+        // Menu.execMenu();
         break;
         case 1:
         System.out.println(repositorio.toString());
@@ -26,7 +28,7 @@ public class AppLeitor {
         default:
         System.out.println("Opção inválida.");
       }
-    } while (opcao != 0);
+    } while (opcao != -1);
     scanner.close();
   }
 }

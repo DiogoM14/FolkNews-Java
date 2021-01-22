@@ -8,6 +8,8 @@ import folknews.services.CriarArtigo;
 import folknews.views.MenuEditor;
 
 public class AppEditor {
+  private AppEditor() {}
+
   public static void execWorkspace(String email) {
     Scanner scanner = new Scanner(System.in);
 
@@ -16,7 +18,7 @@ public class AppEditor {
 
     MenuEditor.execMenuEditor();
     
-    int opcao = 0;
+    int opcao = -1;
     
     do {
       opcao = scanner.nextInt();
@@ -33,7 +35,7 @@ public class AppEditor {
         default:
         System.out.println("Opção inválida.");
       }
-    } while (opcao != 0);
+    } while (opcao != -1);
     scanner.close();
   }
 }

@@ -13,10 +13,6 @@ public class RepositorioUtilizadores {
   public RepositorioUtilizadores() {  // Constructor
   }
 
-  public void addAdmin(Utilizador admin) { // Regista Utilizador
-    this.arrayUtilizadores.add(admin);
-  }
-
   public void addUtilizador(Utilizador user) { // Regista Utilizador
     this.arrayUtilizadores.add(user);
   }
