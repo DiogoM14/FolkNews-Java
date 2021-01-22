@@ -3,7 +3,6 @@ package folknews.repositories;
 import java.util.ArrayList;
 
 import folknews.entities.Utilizador;
-import folknews.entities.enums.TipoUtilizador;
 
 public class RepositorioUtilizadores {
   private ArrayList<Utilizador> arrayUtilizadores = new ArrayList<>();  // Lista de Users
@@ -26,9 +25,9 @@ public class RepositorioUtilizadores {
     return this.arrayUtilizadores.get(pos);
   }
 
-  // public void removeUtilizador(Utilizador email) {
-  //   this.arrayUtilizadores.remove(email);
-  // }
+  public void removeUtilizador(Utilizador email) {
+    this.arrayUtilizadores.remove(email);
+  }
 
   // Receber Lista de todos os Users registados
   @Override

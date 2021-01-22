@@ -2,11 +2,14 @@ package folknews.userInputs;
 
 import java.util.Scanner;
 
+import folknews.App;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.RegistarUtilizador;
 import folknews.views.MenuAdmin;
 
 public class AppAdmin {
+  private AppAdmin() {}
+
   public static void execWorkspaceAdmin() {
     Scanner scanner = new Scanner(System.in);
 
@@ -21,7 +24,7 @@ public class AppAdmin {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        // App.main();
+        App.main(null);
         break;
         case 1:
         registar.execRegisto(repositorio);

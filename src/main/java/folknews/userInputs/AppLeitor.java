@@ -2,11 +2,13 @@ package folknews.userInputs;
 
 import java.util.Scanner;
 
+import folknews.App;
 import folknews.repositories.RepositorioArtigos;
-import folknews.views.Menu;
 import folknews.views.MenuLeitor;
 
 public class AppLeitor {
+  private AppLeitor() {}
+
   public static void execWorkspaceLeitor() {
     Scanner scanner = new Scanner(System.in);
 
@@ -20,7 +22,7 @@ public class AppLeitor {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        // Menu.execMenu();
+        App.main(null);
         break;
         case 1:
         System.out.println(repositorio.toString());
