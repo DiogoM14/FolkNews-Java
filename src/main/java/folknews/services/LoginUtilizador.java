@@ -11,14 +11,15 @@ import folknews.views.Menu;
 
 public class LoginUtilizador {
   Scanner scanner = new Scanner(System.in);
-  
+
   public void execLogin(RepositorioUtilizadores repositorio) {
+
     String email, password;
     int pos;
-    
+
     Utilizador u1 = new Utilizador();
     Utilizador utilizadorFiltrado = new Utilizador();
-    
+
     System.out.println("\n");
     System.out.print("E-mail -> ");
     email = scanner.next();
@@ -27,24 +28,24 @@ public class LoginUtilizador {
     password = scanner.next();
     pos = repositorio.existeEmail(u1);
     u1.setPassword(password);
-    
-    if(pos != -1) { // Se E-mail registado
-      utilizadorFiltrado = repositorio.getUtilizadorPorEmail(pos);  // Objeto com email filtrado
-      
-      if(u1.getPassword() != null && u1.getPassword().equals(utilizadorFiltrado.getPassword())) {
-        
+
+    if (pos != -1) { // Se E-mail registado
+      utilizadorFiltrado = repositorio.getUtilizadorPorEmail(pos); // Objeto com email filtrado
+
+      if (u1.getPassword() != null && u1.getPassword().equals(utilizadorFiltrado.getPassword())) {
+
         switch (utilizadorFiltrado.getTipoUtilizador()) {
           case ADMIN:
-          AppAdmin.execWorkspaceAdmin();
-          break;
+            AppAdmin.execWorkspaceAdmin(repositorio);
+            break;
           case EDITOR:
-          AppEditor.execWorkspace(email);
-          break;
+            AppEditor.execWorkspace(email);
+            break;
           case LEITOR:
-          AppLeitor.execWorkspaceLeitor(null);
-          break;
+            AppLeitor.execWorkspaceLeitor(null);
+            break;
           default:
-          System.out.println("Erro");
+            System.out.println("Erro");
         }
       } else {
         System.out.println("E-mail ou Password errada!");

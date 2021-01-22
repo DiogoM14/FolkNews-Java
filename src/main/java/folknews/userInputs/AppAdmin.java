@@ -23,7 +23,7 @@ public class AppAdmin {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        App.main(null);
+        App.execApp(repositorio);
         break;
         case 1:
         // registar.execRegisto(repositorio);

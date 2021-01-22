@@ -21,7 +21,7 @@ public class AppLeitor {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        App.main(null);
+        App.execApp(null);
         break;
         case 1:
         System.out.println(artigos.toString());
