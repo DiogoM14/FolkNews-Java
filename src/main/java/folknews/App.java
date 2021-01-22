@@ -3,6 +3,7 @@ package folknews;
 import java.util.Scanner;
 
 import folknews.repositories.RepositorioUtilizadores;
+import folknews.services.InicializaAdmin;
 import folknews.services.LoginUtilizador;
 import folknews.services.RegistarUtilizador;
 import folknews.views.Menu;
@@ -14,6 +15,8 @@ public class App {
         RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
         LoginUtilizador login = new LoginUtilizador();
         RegistarUtilizador registar = new RegistarUtilizador();
+        
+        InicializaAdmin.execIniciaAdmin(repositorio);
         
         Menu.execMenu();
         

@@ -3,11 +3,18 @@ package folknews.repositories;
 import java.util.ArrayList;
 
 import folknews.entities.Utilizador;
+import folknews.entities.enums.TipoUtilizador;
 
 public class RepositorioUtilizadores {
   private ArrayList<Utilizador> arrayUtilizadores = new ArrayList<>();  // Lista de Users
 
+  int tipoUtilizador = 0;
+
   public RepositorioUtilizadores() {  // Constructor
+  }
+
+  public void addAdmin(Utilizador admin) { // Regista Utilizador
+    this.arrayUtilizadores.add(admin);
   }
 
   public void addUtilizador(Utilizador user) { // Regista Utilizador

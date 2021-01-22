@@ -2,6 +2,7 @@ package folknews.services;
 
 import java.util.Scanner;
 
+import folknews.userInputs.AppAdmin;
 import folknews.userInputs.AppEditor;
 import folknews.userInputs.AppLeitor;
 import folknews.entities.Utilizador;
@@ -34,7 +35,7 @@ public class LoginUtilizador {
         
         switch (utilizadorFiltrado.getTipoUtilizador()) {
           case ADMIN:
-          System.out.println("ADMIN");
+          AppAdmin.execWorkspaceAdmin();
           break;
           case EDITOR:
           AppEditor.execWorkspace(email);
