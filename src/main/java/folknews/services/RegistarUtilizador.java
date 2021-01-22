@@ -17,7 +17,10 @@ public class RegistarUtilizador {
     Utilizador u1 = new Utilizador(); // Instância o objeto da class utilizador
 
     // Formulário -------------------------------------------------------
+
     System.out.println("\n");
+    System.out.println("Prima alguma tecla para continuar... ");
+    scanner.nextLine();
     System.out.print("Nome e Apelido -> ");
     nome = scanner.nextLine();
     System.out.print("E-mail -> ");
