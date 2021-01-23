@@ -7,8 +7,6 @@ import folknews.entities.Utilizador;
 public class RepositorioUtilizadores {
   private ArrayList<Utilizador> arrayUtilizadores = new ArrayList<>();  // Lista de Users
 
-  int tipoUtilizador = 0;
-
   public RepositorioUtilizadores() {  // Constructor
   }
 

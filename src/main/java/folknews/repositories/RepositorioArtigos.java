@@ -13,6 +13,15 @@ public class RepositorioArtigos {
   public void addArtigo(Artigo artigo) { // Regista Utilizador
     this.arrayArtigos.add(artigo);
   }
+
+  public int existeArtigo(Artigo titulo) {
+    System.out.println(titulo);
+    return this.arrayArtigos.indexOf(titulo);
+  }
+  
+  public void removeArtigo(int pos) {
+    this.arrayArtigos.remove(pos);
+  }
   
   // Receber Lista de todos os Users registados
   @Override

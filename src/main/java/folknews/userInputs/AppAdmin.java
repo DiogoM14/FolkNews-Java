@@ -28,6 +28,7 @@ public class AppAdmin {
         break;
         case 5:
         System.out.println(repositorio.toString());
+        MenuAdmin.execMenuAdmin();
         break;
         default:
         System.out.println("Opção inválida.");

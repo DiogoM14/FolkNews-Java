@@ -79,11 +79,11 @@ public class Artigo {
             return false;
         }
         Artigo artigo = (Artigo) o;
-        return Objects.equals(autor, artigo.autor) && Objects.equals(titulo, artigo.titulo) && Objects.equals(resumo, artigo.resumo) && Objects.equals(corpoArtigo, artigo.corpoArtigo) && Objects.equals(dataPub, artigo.dataPub);
+        return Objects.equals(autor, artigo.autor) && Objects.equals(titulo, artigo.titulo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(autor, titulo, resumo, corpoArtigo, dataPub);
+    return Objects.hash(autor, titulo);
   }
 }
