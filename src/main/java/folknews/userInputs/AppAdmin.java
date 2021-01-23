@@ -3,6 +3,7 @@ package folknews.userInputs;
 import java.util.Scanner;
 
 import folknews.App;
+import folknews.repositories.Armazenar;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.MenuAdmin;
 
@@ -20,11 +21,15 @@ public class AppAdmin {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        App.execApp(repositorio);
+        // App.execApp(repositorio);
         break;
         case 1:
         break;
         case 2:
+        break;
+        case 4:
+        Armazenar.Write(repositorio);
+        MenuAdmin.execMenuAdmin();
         break;
         case 5:
         System.out.println(repositorio.toString());

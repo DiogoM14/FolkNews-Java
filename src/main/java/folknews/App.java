@@ -2,6 +2,7 @@ package folknews;
 
 import java.util.Scanner;
 
+import folknews.repositories.Armazenar;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.InicializaAdmin;
 import folknews.services.LoginUtilizador;
@@ -29,7 +30,7 @@ public class App {
         int opcao = 0;
         
         do {
-            opcao = scanner.nextInt();
+            opcao = scanner.nextInt();  
             switch (opcao) {
                 case 0:
                 break;
@@ -38,6 +39,9 @@ public class App {
                 break;
                 case 2:
                 registar.execRegisto(repositorio);
+                break;
+                case 3:
+                Armazenar.Write(repositorio);
                 break;
                 default:
                 System.out.println("Opção inválida.");
