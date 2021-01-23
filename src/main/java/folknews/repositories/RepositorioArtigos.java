@@ -13,17 +13,7 @@ public class RepositorioArtigos {
   public void addArtigo(Artigo artigo) { // Regista Utilizador
     this.arrayArtigos.add(artigo);
   }
-
-  // public void listar() {                     // Vehicle method
-  //   System.out.println("{" +
-  //     " Todos os Artigos ='" + arrayArtigos + "'" +
-  //     "}");
-  // }
-
-  // public void removeUtilizador(Utilizador email) {
-  //   this.arrayUtilizadores.remove(email);
-  // }
-
+  
   // Receber Lista de todos os Users registados
   @Override
   public String toString() {

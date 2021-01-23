@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import folknews.App;
 import folknews.repositories.RepositorioArtigos;
-import folknews.services.CriarArtigo;
 import folknews.views.MenuLeitor;
 
 public class AppLeitor {

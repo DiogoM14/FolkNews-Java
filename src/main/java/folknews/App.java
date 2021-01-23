@@ -1,33 +1,28 @@
 package folknews;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.InicializaAdmin;
 import folknews.services.LoginUtilizador;
 import folknews.services.RegistarUtilizador;
-import folknews.userInputs.AppAdmin;
 import folknews.views.Menu;
 
 public class App {
     public static void main( String[] args ) {
         
-        RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
+        RepositorioUtilizadores repositorio = new RepositorioUtilizadores();    // Instância classe responsavel por guardar os utilizadores
 
-
-        InicializaAdmin.execIniciaAdmin(repositorio);
-        
-        // AppAdmin.execWorkspaceAdmin(repositorio);
+        InicializaAdmin.execIniciaAdmin(repositorio);   // Cria a conta de Admin
 
         execApp(repositorio);
     }
+
     public static void execApp(RepositorioUtilizadores repositorio) {
         Scanner scanner = new Scanner(System.in);
 
-        LoginUtilizador login = new LoginUtilizador();
-        RegistarUtilizador registar = new RegistarUtilizador();
+        LoginUtilizador login = new LoginUtilizador();  // Instância classe responsavel pelo login
+        RegistarUtilizador registar = new RegistarUtilizador(); // Instância classe responsavel pelo registo
 
         Menu.execMenu();
         

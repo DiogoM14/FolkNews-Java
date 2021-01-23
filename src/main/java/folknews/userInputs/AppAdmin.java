@@ -12,9 +12,6 @@ public class AppAdmin {
   public static void execWorkspaceAdmin(RepositorioUtilizadores repositorio) {
     Scanner scanner = new Scanner(System.in);
 
-    // RegistarUtilizador registar = new RegistarUtilizador();
-    // RepositorioUtilizadores repositorio = new RepositorioUtilizadores();
-
     MenuAdmin.execMenuAdmin();
     
     int opcao = -1;
@@ -26,10 +23,8 @@ public class AppAdmin {
         App.execApp(repositorio);
         break;
         case 1:
-        // registar.execRegisto(repositorio);
         break;
         case 2:
-        System.out.println("FOI!");
         break;
         case 5:
         System.out.println(repositorio.toString());

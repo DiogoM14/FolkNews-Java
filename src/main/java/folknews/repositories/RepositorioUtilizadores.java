@@ -36,5 +36,4 @@ public class RepositorioUtilizadores {
       " Todos os Utilizadores ='" + arrayUtilizadores + "'" +
       "}";
   }
-
 }
