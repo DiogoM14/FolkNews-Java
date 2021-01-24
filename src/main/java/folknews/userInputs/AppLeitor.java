@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 import folknews.App;
 import folknews.repositories.RepositorioArtigos;
+import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.MenuLeitor;
 
 public class AppLeitor {
   private AppLeitor() {}
 
-  public static void execWorkspaceLeitor(RepositorioArtigos artigos) {
+  public static void execWorkspaceLeitor(RepositorioArtigos artigos, RepositorioUtilizadores repo) {
     Scanner scanner = new Scanner(System.in);
 
     MenuLeitor.execMenuLeitor();
@@ -20,7 +21,7 @@ public class AppLeitor {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        App.execApp(null);
+        App.execApp(repo, artigos);
         break;
         case 1:
         System.out.println(artigos.toString());

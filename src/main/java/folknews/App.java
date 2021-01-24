@@ -3,6 +3,7 @@ package folknews;
 import java.util.Scanner;
 
 import folknews.repositories.Armazenar;
+import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.InicializaAdmin;
 import folknews.services.LoginUtilizador;
@@ -13,13 +14,15 @@ public class App {
     public static void main( String[] args ) {
         
         RepositorioUtilizadores repositorio = new RepositorioUtilizadores();    // Instância classe responsavel por guardar os utilizadores
+        RepositorioArtigos repositorioArtigos = new RepositorioArtigos();
+
 
         InicializaAdmin.execIniciaAdmin(repositorio);   // Cria a conta de Admin
 
-        execApp(repositorio);
+        execApp(repositorio, repositorioArtigos);
     }
 
-    public static void execApp(RepositorioUtilizadores repositorio) {
+    public static void execApp(RepositorioUtilizadores repositorio, RepositorioArtigos repositorioArtigos) {
         Scanner scanner = new Scanner(System.in);
 
         LoginUtilizador login = new LoginUtilizador();  // Instância classe responsavel pelo login
@@ -35,7 +38,7 @@ public class App {
                 case 0:
                 break;
                 case 1:
-                login.execLogin(repositorio);
+                login.execLogin(repositorio, repositorioArtigos);
                 break;
                 case 2:
                 registar.execRegisto(repositorio);

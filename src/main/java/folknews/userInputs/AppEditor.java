@@ -5,6 +5,7 @@ import java.util.Scanner;
 import folknews.App;
 import folknews.repositories.ArmazenarArtigos;
 import folknews.repositories.RepositorioArtigos;
+import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.CriarArtigo;
 import folknews.services.EliminaArtigo;
 import folknews.views.MenuEditor;
@@ -12,10 +13,9 @@ import folknews.views.MenuEditor;
 public class AppEditor {
   private AppEditor() {}
 
-  public static void execWorkspace(String email) {
+  public static void execWorkspace(String email, RepositorioUtilizadores repo, RepositorioArtigos repositorioArtigos) {
     Scanner scanner = new Scanner(System.in);
 
-    RepositorioArtigos repositorio = new RepositorioArtigos();
     CriarArtigo cria = new CriarArtigo();
     EliminaArtigo elimina = new EliminaArtigo();
 
@@ -27,22 +27,22 @@ public class AppEditor {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        // App.execApp(null);
+        App.execApp(repo, repositorioArtigos);
         break;
         case 1:
-        cria.execRegistaArtigo(repositorio, email);
+        cria.execRegistaArtigo(repositorioArtigos, email);
         break;
         case 2:
         break;
         case 3:
-        elimina.execEliminarArtigo(repositorio, email);
+        elimina.execEliminarArtigo(repositorioArtigos, email);
         break;
         case 4:
-        System.out.println(repositorio.toString());
+        System.out.println(repositorioArtigos.toString());
         MenuEditor.execMenuEditor();
         break;
         case 5:
-        ArmazenarArtigos.Write(repositorio);
+        ArmazenarArtigos.Write(repositorioArtigos);
         MenuEditor.execMenuEditor();
         break;
         default:

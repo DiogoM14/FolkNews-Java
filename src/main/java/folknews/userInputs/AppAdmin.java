@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import folknews.App;
 import folknews.repositories.Armazenar;
+import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.EliminaUtilizador;
 import folknews.services.RegistarUtilizador;
@@ -12,7 +13,7 @@ import folknews.views.MenuAdmin;
 public class AppAdmin {
   private AppAdmin() {}
 
-  public static void execWorkspaceAdmin(RepositorioUtilizadores repositorio) {
+  public static void execWorkspaceAdmin(RepositorioUtilizadores repositorio, RepositorioArtigos repositorioArtigos) {
     Scanner scanner = new Scanner(System.in);
 
     MenuAdmin.execMenuAdmin();
@@ -23,7 +24,7 @@ public class AppAdmin {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        // App.execApp(repositorio);
+        App.execApp(repositorio, repositorioArtigos);
         break;
         case 1:
         RegistarUtilizador.execRegisto(repositorio);

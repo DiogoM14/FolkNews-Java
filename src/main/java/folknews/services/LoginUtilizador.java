@@ -6,13 +6,14 @@ import folknews.userInputs.AppAdmin;
 import folknews.userInputs.AppEditor;
 import folknews.userInputs.AppLeitor;
 import folknews.entities.Utilizador;
+import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.Menu;
 
 public class LoginUtilizador {
   Scanner scanner = new Scanner(System.in);
 
-  public void execLogin(RepositorioUtilizadores repositorio) {
+  public void execLogin(RepositorioUtilizadores repositorio, RepositorioArtigos repositorioArtigos) {
 
     String email, password;
     int pos;
@@ -36,13 +37,13 @@ public class LoginUtilizador {
 
         switch (utilizadorFiltrado.getTipoUtilizador()) {
           case ADMIN:
-            AppAdmin.execWorkspaceAdmin(repositorio);
+            AppAdmin.execWorkspaceAdmin(repositorio, repositorioArtigos);
             break;
           case EDITOR:
-            AppEditor.execWorkspace(email);
+            AppEditor.execWorkspace(email, repositorio, repositorioArtigos);
             break;
           case LEITOR:
-            AppLeitor.execWorkspaceLeitor(null);
+            AppLeitor.execWorkspaceLeitor(repositorioArtigos, repositorio);
             break;
           default:
             System.out.println("Erro");
