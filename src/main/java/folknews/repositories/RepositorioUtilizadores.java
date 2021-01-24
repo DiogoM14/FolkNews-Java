@@ -23,6 +23,10 @@ public class RepositorioUtilizadores {
     return this.arrayUtilizadores.get(pos);
   }
 
+  public void actualizaUtilizador(int pos, Utilizador utilizador) {
+    this.arrayUtilizadores.set(pos, utilizador);
+  }
+
   public void removeUtilizador(int pos) {
     this.arrayUtilizadores.remove(pos);
   }

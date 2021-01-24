@@ -6,6 +6,7 @@ import folknews.App;
 import folknews.repositories.Armazenar;
 import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
+import folknews.services.AlteraUtilizador;
 import folknews.services.EliminaUtilizador;
 import folknews.services.RegistarUtilizador;
 import folknews.views.MenuAdmin;
@@ -31,6 +32,8 @@ public class AppAdmin {
         MenuAdmin.execMenuAdmin();
         break;
         case 2:
+        AlteraUtilizador.execAlteraUtilizador(repositorio);
+        MenuAdmin.execMenuAdmin();
         break;
         case 3:
         EliminaUtilizador.execEliminarUtilizador(repositorio);
