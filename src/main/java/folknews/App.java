@@ -39,6 +39,7 @@ public class App {
                 break;
                 case 2:
                 registar.execRegisto(repositorio);
+                Menu.execMenu();
                 break;
                 case 3:
                 Armazenar.Write(repositorio);

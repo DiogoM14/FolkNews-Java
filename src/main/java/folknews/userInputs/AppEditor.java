@@ -27,7 +27,7 @@ public class AppEditor {
       opcao = scanner.nextInt();
       switch (opcao) {
         case 0:
-        App.execApp(null);
+        // App.execApp(null);
         break;
         case 1:
         cria.execRegistaArtigo(repositorio, email);

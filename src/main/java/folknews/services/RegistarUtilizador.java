@@ -8,9 +8,9 @@ import folknews.repositories.RepositorioUtilizadores;
 import folknews.views.Menu;
 
 public class RegistarUtilizador {
-  Scanner scanner = new Scanner(System.in);
+  static Scanner scanner = new Scanner(System.in);
   
-  public void execRegisto(RepositorioUtilizadores repositorio) {
+  public static void execRegisto(RepositorioUtilizadores repositorio) {
     String nome, email, password, profissao, dataNascimento, temaPreferencial;
     int tipoUtilizador, pos = 0;
 
@@ -54,11 +54,11 @@ public class RegistarUtilizador {
 
     if(pos != -1) { // Se E-mail registado
       System.out.println("E-mail já registado.");
-      Menu.execMenu();
+
     } else {
       repositorio.addUtilizador(u1);
       // System.out.println(repositorio.toString());
-      Menu.execMenu();
+
     }
   }
 }

@@ -23,8 +23,8 @@ public class RepositorioUtilizadores {
     return this.arrayUtilizadores.get(pos);
   }
 
-  public void removeUtilizador(Utilizador email) {
-    this.arrayUtilizadores.remove(email);
+  public void removeUtilizador(int pos) {
+    this.arrayUtilizadores.remove(pos);
   }
 
   // Receber Lista de todos os Users registados

@@ -5,6 +5,8 @@ import java.util.Scanner;
 import folknews.App;
 import folknews.repositories.Armazenar;
 import folknews.repositories.RepositorioUtilizadores;
+import folknews.services.EliminaUtilizador;
+import folknews.services.RegistarUtilizador;
 import folknews.views.MenuAdmin;
 
 public class AppAdmin {
@@ -24,16 +26,20 @@ public class AppAdmin {
         // App.execApp(repositorio);
         break;
         case 1:
+        RegistarUtilizador.execRegisto(repositorio);
+        MenuAdmin.execMenuAdmin();
         break;
         case 2:
         break;
-        case 4:
+        case 3:
+        EliminaUtilizador.execEliminarUtilizador(repositorio);
+        MenuAdmin.execMenuAdmin();
         break;
-        case 5:
+        case 4:
         System.out.println(repositorio.toString());
         MenuAdmin.execMenuAdmin();
         break;
-        case 6:
+        case 5:
         Armazenar.Write(repositorio);
         MenuAdmin.execMenuAdmin();
         break;
