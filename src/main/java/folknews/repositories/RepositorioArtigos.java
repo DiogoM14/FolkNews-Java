@@ -15,8 +15,16 @@ public class RepositorioArtigos {
   }
 
   public int existeArtigo(Artigo titulo) {
-    System.out.println(titulo);
+    // System.out.println(titulo);
     return this.arrayArtigos.indexOf(titulo);
+  }
+
+  public Artigo getArtigo(int pos) {
+    return this.arrayArtigos.get(pos);
+  }
+
+  public void actualizaArtigo(int pos, Artigo artigo) {
+    this.arrayArtigos.set(pos, artigo);
   }
   
   public void removeArtigo(int pos) {

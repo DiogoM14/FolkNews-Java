@@ -20,7 +20,7 @@ public class EliminaArtigo {
     a1.setTitulo(titulo);
     a1.setAutor(email);
     pos = repositorio.existeArtigo(a1);
-    System.out.println("OUTPUT REPOSITORY" + pos);
+    // System.out.println("OUTPUT REPOSITORY" + pos);
     
     if (pos != -1) { // Se E-mail registado
       repositorio.removeArtigo(pos);

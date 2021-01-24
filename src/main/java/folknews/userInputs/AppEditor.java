@@ -6,6 +6,7 @@ import folknews.App;
 import folknews.repositories.ArmazenarArtigos;
 import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
+import folknews.services.AlteraArtigo;
 import folknews.services.CriarArtigo;
 import folknews.services.EliminaArtigo;
 import folknews.views.MenuEditor;
@@ -33,6 +34,8 @@ public class AppEditor {
         cria.execRegistaArtigo(repositorioArtigos, email);
         break;
         case 2:
+        AlteraArtigo.execAlteraArtigo(repositorioArtigos, email);
+        MenuEditor.execMenuEditor();
         break;
         case 3:
         elimina.execEliminarArtigo(repositorioArtigos, email);

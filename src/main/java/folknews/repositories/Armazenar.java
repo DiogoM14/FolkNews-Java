@@ -13,7 +13,7 @@ public class Armazenar {
 
   public static boolean Write(RepositorioUtilizadores repositorio){
     try {
-      FileWriter arq = new FileWriter("Utilizadores.txt");
+      FileWriter arq = new FileWriter("Utilizadores.arq");
       PrintWriter gravarArq = new PrintWriter(arq);
       gravarArq.println(repositorio);
       gravarArq.close();
