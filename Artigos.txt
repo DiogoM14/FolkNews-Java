@@ -1,0 +1,1 @@
+{ Todos os Artigos ='[{ autor='diogo@gmail.com', titulo='a', resumo='a', corpoArtigo='a', dataPub='a'}, { autor='diogo@gmail.com', titulo='g', resumo='g', corpoArtigo='g', dataPub='g'}]'}

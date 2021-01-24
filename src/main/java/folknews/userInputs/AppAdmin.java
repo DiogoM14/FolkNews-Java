@@ -28,11 +28,13 @@ public class AppAdmin {
         case 2:
         break;
         case 4:
-        Armazenar.Write(repositorio);
-        MenuAdmin.execMenuAdmin();
         break;
         case 5:
         System.out.println(repositorio.toString());
+        MenuAdmin.execMenuAdmin();
+        break;
+        case 6:
+        Armazenar.Write(repositorio);
         MenuAdmin.execMenuAdmin();
         break;
         default:

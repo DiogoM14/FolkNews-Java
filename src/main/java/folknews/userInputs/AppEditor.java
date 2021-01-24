@@ -3,6 +3,7 @@ package folknews.userInputs;
 import java.util.Scanner;
 
 import folknews.App;
+import folknews.repositories.ArmazenarArtigos;
 import folknews.repositories.RepositorioArtigos;
 import folknews.services.CriarArtigo;
 import folknews.services.EliminaArtigo;
@@ -38,6 +39,10 @@ public class AppEditor {
         break;
         case 4:
         System.out.println(repositorio.toString());
+        MenuEditor.execMenuEditor();
+        break;
+        case 5:
+        ArmazenarArtigos.Write(repositorio);
         MenuEditor.execMenuEditor();
         break;
         default:

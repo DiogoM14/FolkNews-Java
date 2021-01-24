@@ -11,6 +11,7 @@ public class MenuEditor {
     System.out.println("2. Editar Artigo");
     System.out.println("3. Eliminar Artigo");
     System.out.println("4. Consultar Todos o seus Artigos");
+    System.out.println("5. Guardar Todos os Artigos");
     System.out.print("Opcao: ");
   }
 }

@@ -8,14 +8,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-public class Armazenar {
-  public static boolean Write(RepositorioUtilizadores repositorio){
+public class ArmazenarArtigos {
+  public static boolean Write(RepositorioArtigos repositorio){
     try {
-      FileWriter arq = new FileWriter("Utilizadores.txt");
+      FileWriter arq = new FileWriter("Artigos.txt");
       PrintWriter gravarArq = new PrintWriter(arq);
       gravarArq.println(repositorio);
       gravarArq.close();
-      System.out.println("Utilizadores guardados com sucesso!");
+      System.out.println("Artigos guardados com sucesso!");
       return true;
     } catch(IOException e) {
       System.out.println(e.getMessage());
