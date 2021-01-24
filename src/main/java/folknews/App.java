@@ -26,7 +26,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         LoginUtilizador login = new LoginUtilizador();  // Instância classe responsavel pelo login
-        RegistarUtilizador registar = new RegistarUtilizador(); // Instância classe responsavel pelo registo
 
         Menu.execMenu();
         
@@ -41,7 +40,7 @@ public class App {
                 login.execLogin(repositorio, repositorioArtigos);
                 break;
                 case 2:
-                registar.execRegisto(repositorio);
+                RegistarUtilizador.execRegisto(repositorio);
                 Menu.execMenu();
                 break;
                 case 3:

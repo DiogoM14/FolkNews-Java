@@ -9,6 +9,8 @@ import java.io.PrintWriter;
 
 
 public class ArmazenarArtigos {
+  private ArmazenarArtigos() {}
+
   public static boolean Write(RepositorioArtigos repositorio){
     try {
       FileWriter arq = new FileWriter("Artigos.txt");

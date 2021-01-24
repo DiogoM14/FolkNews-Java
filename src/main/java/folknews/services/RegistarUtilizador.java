@@ -5,9 +5,10 @@ import java.util.Scanner;
 import folknews.entities.Utilizador;
 import folknews.entities.enums.TipoUtilizador;
 import folknews.repositories.RepositorioUtilizadores;
-import folknews.views.Menu;
 
 public class RegistarUtilizador {
+  private RegistarUtilizador() {}
+
   static Scanner scanner = new Scanner(System.in);
   
   public static void execRegisto(RepositorioUtilizadores repositorio) {

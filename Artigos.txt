@@ -1,1 +1,0 @@
-{ Todos os Artigos ='[{ autor='a', titulo='frfrgr', resumo='grgsdrg', corpoArtigo='segseg', dataPub='segsegs'}, { autor='a', titulo='t', resumo='t', corpoArtigo='t', dataPub='t'}]'}
