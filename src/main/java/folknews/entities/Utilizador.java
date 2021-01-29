@@ -6,7 +6,11 @@ import java.util.Objects;
 import folknews.entities.enums.TipoUtilizador;
 
 public class Utilizador implements Serializable {
-  private String nome;
+  /**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+private String nome;
   private String email;
   private String password;
   private String profissao;

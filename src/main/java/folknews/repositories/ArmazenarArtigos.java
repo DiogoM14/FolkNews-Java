@@ -1,51 +1,42 @@
 package folknews.repositories;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 
 public class ArmazenarArtigos {
   private ArmazenarArtigos() {}
-
-  public static boolean Write(RepositorioArtigos repositorio){
-    try {
-      FileWriter arq = new FileWriter("Artigos.txt");
-      PrintWriter gravarArq = new PrintWriter(arq);
-      gravarArq.println(repositorio);
-      gravarArq.close();
-      System.out.println("Artigos guardados com sucesso!");
-      return true;
-    } catch(IOException e) {
-      System.out.println(e.getMessage());
-      return false;
-    }
-  }
   
-  // public static String Read(String Caminho){
-  //   String conteudo = "";
-  //   try {
-  //     FileReader arq = new FileReader(Caminho);
-  //     BufferedReader lerArq = new BufferedReader(arq);
-  //     String linha="";
-  //     try {
-  //       linha = lerArq.readLine();
-  //       while(linha!=null){
-  //         conteudo += linha+"\n";
-  //         linha = lerArq.readLine();
-  //       }
-  //       arq.close();
-  //       return conteudo;
-  //     } catch (IOException ex) {
-  //       System.out.println("Erro: Não foi possível ler o arquivo!");
-  //       return "";
-  //     }
-  //   } catch (FileNotFoundException ex) {
-  //     System.out.println("Erro: Arquivo não encontrado!");
-  //     return "";
-  //   }
-  // }
+  public static int Write(RepositorioArtigos repo ){
+    try (FileOutputStream fs = new FileOutputStream("Artigos.arq");
+    ObjectOutputStream os = new ObjectOutputStream(fs)) {
+      
+      
+      os.writeObject(repo); //referencia a estrutura que se quer armazenar
+      os.close( );
+      System.out.println("Artigos Guardados com Sucesso!");
+      return 0;
+    }catch(Exception ex){
+      return -1;     
+    }
+  }  
+  
+  public static RepositorioArtigos lerDados(String caminho){
+    try (FileInputStream fs = new FileInputStream(caminho);
+    ObjectInputStream os = new ObjectInputStream(fs)) {
+      
+      RepositorioArtigos novaRepoArtigos = new RepositorioArtigos();
+      
+      novaRepoArtigos = (RepositorioArtigos)os.readObject(); //referencia a estrutura que se quer armazenar
+      
+      System.out.println("Dados Salvos com Sucesso!");
+      os.close( );
+      return novaRepoArtigos;
+    } catch (Exception ex) {
+      System.out.println(ex.toString());
+      return null;
+    }
+  }   
 }

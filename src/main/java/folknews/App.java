@@ -7,7 +7,6 @@ import folknews.repositories.ArmazenarArtigos;
 import folknews.repositories.RepositorioArtigos;
 import folknews.repositories.RepositorioUtilizadores;
 import folknews.services.InicializaAdmin;
-import folknews.services.LerFicheiroUtilizadores;
 import folknews.services.LoginUtilizador;
 import folknews.services.RegistarUtilizador;
 import folknews.views.Menu;
@@ -54,11 +53,11 @@ public class App {
                 Menu.execMenu();
                 break;
                 case 5:
-
+                repositorioArtigos = ArmazenarArtigos.lerDados("Artigos.arq");
                 Menu.execMenu();
                 break;
                 case 6:
-                repositorio = LerFicheiroUtilizadores.ler();
+                repositorio = Armazenar.lerDados("Utilizadores.arq");
                 System.out.print(repositorio);
                 Menu.execMenu();
                 break;

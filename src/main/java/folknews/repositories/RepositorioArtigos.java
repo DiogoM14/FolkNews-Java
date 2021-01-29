@@ -1,11 +1,16 @@
 package folknews.repositories;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import folknews.entities.Artigo;
 
-public class RepositorioArtigos {
-  private ArrayList<Artigo> arrayArtigos = new ArrayList<>();  // Lista de Users
+public class RepositorioArtigos implements Serializable {
+  /**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+private ArrayList<Artigo> arrayArtigos = new ArrayList<>();  // Lista de Users
 
   public RepositorioArtigos() {  // Constructor
   }

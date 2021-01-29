@@ -7,10 +7,10 @@ public class LerFicheiroUtilizadores {
   private LerFicheiroUtilizadores() {}
 
   //Lê informação do ficheiro e carrega no repositório de Utilizadores
-  public static RepositorioUtilizadores ler() {
-    RepositorioUtilizadores repo = new RepositorioUtilizadores();
+  // public static RepositorioUtilizadores ler() {
+  //   RepositorioUtilizadores repo = new RepositorioUtilizadores();
     
-    repo = Armazenar.lerDados("Utilizadores.arq");
-    return repo;
-  }
+  //   repo = Armazenar.lerDados("Utilizadores.arq");
+  //   return repo;
+  // }
 }

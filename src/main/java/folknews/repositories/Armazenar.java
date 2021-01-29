@@ -1,42 +1,38 @@
 package folknews.repositories;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
-import java.io.PrintWriter;
+import java.io.ObjectOutputStream;
 
 
 public class Armazenar {
   private Armazenar() {}
-  
-  public static boolean Write(RepositorioUtilizadores repositorio){
-    try {
-      FileWriter arq = new FileWriter("Utilizadores.arq");
-      PrintWriter gravarArq = new PrintWriter(arq);
-      gravarArq.println(repositorio);
-      gravarArq.close();
-      System.out.println("Utilizadores guardados com sucesso!");
-      return true;
-    } catch(IOException e) {
-      System.out.println(e.getMessage());
-      return false;
-    }
-  }
-  
+     public static int Write(RepositorioUtilizadores repo ){
+        try (FileOutputStream fs = new FileOutputStream("Utilizadores.arq");
+            ObjectOutputStream os = new ObjectOutputStream(fs)) {
+            
+
+            os.writeObject(repo); //referencia a estrutura que se quer armazenar
+            os.close( );
+            System.out.println("Dados Salvos com Sucesso!");
+            return 0;
+        }catch(Exception ex){
+            return -1;     
+        }
+    }  
+
+
   public static RepositorioUtilizadores lerDados(String caminho){
     try (FileInputStream fs = new FileInputStream(caminho);
         ObjectInputStream os = new ObjectInputStream(fs)) {
 
       RepositorioUtilizadores novaRepoUtilizadores = new RepositorioUtilizadores();
-      
+
       novaRepoUtilizadores = (RepositorioUtilizadores)os.readObject(); //referencia a estrutura que se quer armazenar
 
       System.out.println("Dados Salvos com Sucesso!");
-      os.close();
+      os.close( );
       return novaRepoUtilizadores;
     } catch (Exception ex) {
       System.out.println(ex.toString());

@@ -4,7 +4,11 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class Artigo implements Serializable {
-  private String autor;
+  /**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+private String autor;
   private String titulo;
   private String resumo;
   private String corpoArtigo;
