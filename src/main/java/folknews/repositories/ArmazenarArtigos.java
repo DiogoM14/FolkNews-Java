@@ -31,7 +31,7 @@ public class ArmazenarArtigos {
       
       novaRepoArtigos = (RepositorioArtigos)os.readObject(); //referencia a estrutura que se quer armazenar
       
-      System.out.println("Dados Salvos com Sucesso!");
+      System.out.println("Artigos Carregados com Sucesso!");
       os.close( );
       return novaRepoArtigos;
     } catch (Exception ex) {

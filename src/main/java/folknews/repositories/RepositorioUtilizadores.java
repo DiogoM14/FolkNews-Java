@@ -6,11 +6,8 @@ import java.util.ArrayList;
 import folknews.entities.Utilizador;
 
 public class RepositorioUtilizadores implements Serializable {
-/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
-private ArrayList<Utilizador> arrayUtilizadores = new ArrayList<>();  // Lista de Users
+  private ArrayList<Utilizador> arrayUtilizadores = new ArrayList<>();  // Lista de Users
 
   public RepositorioUtilizadores() {  // Constructor
   }

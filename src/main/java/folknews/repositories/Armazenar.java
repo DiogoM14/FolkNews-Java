@@ -15,7 +15,7 @@ public class Armazenar {
 
             os.writeObject(repo); //referencia a estrutura que se quer armazenar
             os.close( );
-            System.out.println("Dados Salvos com Sucesso!");
+            System.out.println("Utilizadores Guardados com Sucesso!");
             return 0;
         }catch(Exception ex){
             return -1;     
@@ -31,7 +31,7 @@ public class Armazenar {
 
       novaRepoUtilizadores = (RepositorioUtilizadores)os.readObject(); //referencia a estrutura que se quer armazenar
 
-      System.out.println("Dados Salvos com Sucesso!");
+      System.out.println("Utilizadores Carregados com Sucesso!");
       os.close( );
       return novaRepoUtilizadores;
     } catch (Exception ex) {
