@@ -2,7 +2,6 @@ package folknews.services;
 
 import java.util.Scanner;
 
-import folknews.entities.Artigo;
 import folknews.entities.Utilizador;
 import folknews.entities.enums.TipoUtilizador;
 import folknews.repositories.RepositorioUtilizadores;

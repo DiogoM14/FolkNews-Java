@@ -1,10 +1,11 @@
 package folknews.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import folknews.entities.enums.TipoUtilizador;
 
-public class Utilizador {
+public class Utilizador implements Serializable {
   private String nome;
   private String email;
   private String password;

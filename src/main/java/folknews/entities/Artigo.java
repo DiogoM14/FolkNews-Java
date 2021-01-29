@@ -1,8 +1,9 @@
 package folknews.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Artigo {
+public class Artigo implements Serializable {
   private String autor;
   private String titulo;
   private String resumo;

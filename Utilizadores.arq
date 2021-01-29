@@ -1,1 +1,1 @@
-{ Todos os Utilizadores ='[{ nome='', email='admin', password='admin', profissao='', dataNascimento='', temaPreferencial='', tipoUtilizador='ADMIN'}]'}
+{ Todos os Utilizadores ='[{ nome='', email='admin', password='admin', profissao='', dataNascimento='', temaPreferencial='', tipoUtilizador='ADMIN'}, { nome='a', email='a', password='a', profissao='a', dataNascimento='aa', temaPreferencial='a', tipoUtilizador='EDITOR'}]'}

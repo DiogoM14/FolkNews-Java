@@ -19,7 +19,7 @@ public class RegistarUtilizador {
 
     // Formulário -------------------------------------------------------
     System.out.println("\n");
-    System.out.println("Prima alguma tecla para continuar... ");
+    System.out.println("Prima Enter para continuar... ");
     scanner.nextLine();
     System.out.print("Nome e Apelido -> ");
     nome = scanner.nextLine();
@@ -59,7 +59,6 @@ public class RegistarUtilizador {
     } else {
       repositorio.addUtilizador(u1);
       // System.out.println(repositorio.toString());
-
     }
   }
 }
